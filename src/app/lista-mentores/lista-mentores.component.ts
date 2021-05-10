@@ -13,11 +13,8 @@ export class ListaMentoresComponent implements OnInit {
 
   constructor(private mentoresservice: MentoresService) { }
 
-  ngOnInit(): void {
-    this.mentoresservice.getAllPromise()
-      .then(mentores => {
-        this.arrMentores = mentores;
-      });
+  async ngOnInit() {
+    this.arrMentores = await this.mentoresservice.getAllPromise();
   }
 
 }
