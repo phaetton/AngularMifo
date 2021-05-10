@@ -22,5 +22,4 @@ export class DetalleComponent implements OnInit {
       this.mentor = await this.mentoresservice.getById(parseInt(params.mentorId));
     })
   }
-
 }

@@ -17,4 +17,13 @@ export class MentoradosService {
       resolve(arrFiltrado);
     });
   }
+
+  getById(mentoradoId): Promise<Mentorado> {
+    return new Promise((resolve, reject) => {
+      const mentoradofound = MENTORADOS.find(mentorado => {
+        return mentorado.id === mentoradoId;
+      });
+      resolve(mentoradofound);
+    });
+  }
 }

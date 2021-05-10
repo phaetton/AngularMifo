@@ -24,5 +24,4 @@ export class ListaMentoresComponent implements OnInit {
       this.arrMentores = await this.mentoresservice.getByOficina($event.target.value);
     }
   }
-
 }

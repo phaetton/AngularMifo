@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ListaMentoresComponent } from './lista-mentores/lista-mentores.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { ListaMentoradosComponent } from './lista-mentorados/lista-mentorados.component';
+import { DetalleMentoradoComponent } from './detalle-mentorado/detalle-mentorado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaMentoresComponent,
     DetalleComponent,
-    ListaMentoradosComponent
+    ListaMentoradosComponent,
+    DetalleMentoradoComponent
   ],
   imports: [
     BrowserModule,

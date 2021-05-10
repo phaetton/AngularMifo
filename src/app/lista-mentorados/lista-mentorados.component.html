@@ -1,6 +1,6 @@
 <div class="mentorados">
-  <div class="mentorado" *ngFor="let mentorado of mentorados">
+  <div class="mentorado" *ngFor="let mentorado of mentorados" [routerLink]="['/mentorados',mentorado.id]">
     <img [src]="mentorado.imagen" alt="" />
-    <p>{{ mentorado.nombre }} {{ mentorado.apellido }}</p>
+    <p>{{mentorado.id}} - {{ mentorado.nombre }} {{ mentorado.apellido }}</p>
   </div>
 </div>
