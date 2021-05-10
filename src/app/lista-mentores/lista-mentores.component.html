@@ -6,7 +6,7 @@
 </select>
 
 <div class="mentores">
-  <div class="mentor" *ngFor="let mentor of arrMentores">
+  <div class="mentor" *ngFor="let mentor of arrMentores" [routerLink]="['/mentores',mentor.id]">
     <h3>
       {{ mentor.id }} - {{ mentor.nombre }} {{ mentor.apellido }}
     </h3>
