@@ -17,4 +17,12 @@ export class ListaMentoresComponent implements OnInit {
     this.arrMentores = await this.mentoresservice.getAllPromise();
   }
 
+  async onchange($event) {
+    if ($event.target.value === 'Todos') {
+      this.arrMentores = await this.mentoresservice.getAllPromise();
+    } else {
+      this.arrMentores = await this.mentoresservice.getByOficina($event.target.value);
+    }
+  }
+
 }

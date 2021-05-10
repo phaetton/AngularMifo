@@ -16,11 +16,20 @@ export class MentoresService {
     return MENTORES;
   }
 
-//mismo de getall pero como promesa
+  //mismo de getall pero como promesa
   getAllPromise(): Promise<Mentor[]> {
     return new Promise((resolve, reject) => {
       resolve(MENTORES);
     })
+  }
+
+  getByOficina(pOficina: string): Promise<Mentor[]> {
+    return new Promise((resolve, reject) => {
+      const arrFiltrado = MENTORES.filter(mentor => {
+        return mentor.oficina === pOficina;
+      });
+      resolve(arrFiltrado);
+    });
   }
 
 }
