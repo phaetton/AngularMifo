@@ -1,1 +1,14 @@
-<p>lista-mentores works!</p>
+<div class="mentores">
+  <div class="mentor" *ngFor="let escritor of arrMentores">
+    <h3>
+      {{ escritor.id }} - {{ escritor.nombre }} {{ escritor.apellido }}
+    </h3>
+    <img [src]="escritor.imagen" alt="" />
+    <ul>
+      <li>{{ escritor.oficina }}</li>
+      <li>{{ escritor.email }}</li>
+      <li>{{ escritor.celular }}</li>
+      <li>{{ escritor.whatsapp }}</li>
+    </ul>
+  </div>
+</div>
