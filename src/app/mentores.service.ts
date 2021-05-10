@@ -32,4 +32,12 @@ export class MentoresService {
     });
   }
 
+  getById(mentorId): Promise<Mentor> {
+    return new Promise((resolve, reject) => {
+      const mentorfound = MENTORES.find(mentor => {
+        return mentor.id === mentorId;
+      });
+      resolve(mentorfound);
+    });
+  }
 }
