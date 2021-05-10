@@ -15,4 +15,12 @@ export class MentoresService {
   getAll(): Mentor[] {
     return MENTORES;
   }
+
+//mismo de getall pero como promesa
+  getAllPromise(): Promise<Mentor[]> {
+    return new Promise((resolve, reject) => {
+      resolve(MENTORES);
+    })
+  }
+
 }

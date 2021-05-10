@@ -14,7 +14,10 @@ export class ListaMentoresComponent implements OnInit {
   constructor(private mentoresservice: MentoresService) { }
 
   ngOnInit(): void {
-    this.arrMentores = this.mentoresservice.getAll();
+    this.mentoresservice.getAllPromise()
+      .then(mentores => {
+        this.arrMentores = mentores;
+      });
   }
 
 }
