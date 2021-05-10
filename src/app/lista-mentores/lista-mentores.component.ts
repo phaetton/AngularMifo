@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MentoresService } from '../mentores.service';
 
 @Component({
   selector: 'app-lista-mentores',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaMentoresComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mentoresservice:MentoresService) { }
 
   ngOnInit(): void {
+    const mentores=this.mentoresservice.getAll();
+console.log(mentores);
   }
 
 }
