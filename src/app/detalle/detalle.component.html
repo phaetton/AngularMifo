@@ -1,1 +1,10 @@
-<p>detalle works!</p>
+<div class="mentor">
+  <h3>{{ mentor?.id }} - {{ mentor?.nombre }} {{ mentor?.apellido }}</h3>
+  <img [src]="mentor?.imagen" alt="" />
+  <ul>
+    <li>{{ mentor?.oficina }}</li>
+    <li>{{ mentor?.email }}</li>
+    <li>{{ mentor?.celular }}</li>
+    <li>{{ mentor?.whatsapp }}</li>
+  </ul>
+</div>

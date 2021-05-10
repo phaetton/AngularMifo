@@ -6,16 +6,16 @@
 </select>
 
 <div class="mentores">
-  <div class="mentor" *ngFor="let escritor of arrMentores">
+  <div class="mentor" *ngFor="let mentor of arrMentores">
     <h3>
-      {{ escritor.id }} - {{ escritor.nombre }} {{ escritor.apellido }}
+      {{ mentor.id }} - {{ mentor.nombre }} {{ mentor.apellido }}
     </h3>
-    <img [src]="escritor.imagen" alt="" />
+    <img [src]="mentor.imagen" alt="" />
     <ul>
-      <li>{{ escritor.oficina }}</li>
-      <li>{{ escritor.email }}</li>
-      <li>{{ escritor.celular }}</li>
-      <li>{{ escritor.whatsapp }}</li>
+      <li>{{ mentor.oficina }}</li>
+      <li>{{ mentor.email }}</li>
+      <li>{{ mentor.celular }}</li>
+      <li>{{ mentor.whatsapp }}</li>
     </ul>
   </div>
 </div>
