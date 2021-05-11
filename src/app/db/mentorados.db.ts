@@ -2,96 +2,96 @@ import { Mentorado } from "../models/mentorado.model";
 
 export const MENTORADOS: Mentorado[] = [
     {
-        id: 1,
+        id: 3,
         nombre: 'Maria',
         apellido: 'Perez',
         email: 'maria@yimeil.com',
-        imagen: './assets/img/9.jpg',
+        imagen: './assets/img/3.jpg',
         celular: 12345678,
         whatsapp: 87654321,
         mentor: 1
-    },
-    {
-        id: 2,
-        nombre: 'Mario',
-        apellido: 'Perez',
-        email: 'mario@yimeil.com',
-        imagen: './assets/img/10.jpg',
-        celular: 12345678,
-        whatsapp: 87654321,
-        mentor: 2
-    },
-    {
-        id: 3,
-        nombre: 'Karen',
-        apellido: 'Zuarez',
-        email: 'karen@yimeil.com',
-        imagen: './assets/img/11.jpg',
-        celular: 12345678,
-        whatsapp: 87654321,
-        mentor: 3
     },
     {
         id: 4,
-        nombre: 'Napoleon',
-        apellido: 'Bonaparte',
-        email: 'napoleon@yimeil.com',
-        imagen: './assets/img/12.jpg',
+        nombre: 'Mario',
+        apellido: 'Perez',
+        email: 'mario@yimeil.com',
+        imagen: './assets/img/4.jpg',
         celular: 12345678,
         whatsapp: 87654321,
-        mentor: 1
+        mentor: 6
     },
     {
         id: 5,
-        nombre: 'Edgar',
-        apellido: 'Lopez',
-        email: 'edgar@yimeil.com',
-        imagen: './assets/img/13.jpg',
+        nombre: 'Karen',
+        apellido: 'Zuarez',
+        email: 'karen@yimeil.com',
+        imagen: './assets/img/5.jpg',
         celular: 12345678,
         whatsapp: 87654321,
-        mentor: 2
-    },
-    {
-        id: 6,
-        nombre: 'Pedro',
-        apellido: 'Elisondo',
-        email: 'pedro@yimeil.com',
-        imagen: './assets/img/14.jpg',
-        celular: 12345678,
-        whatsapp: 87654321,
-        mentor: 3
-    },
-    {
-        id: 7,
-        nombre: 'Carmen',
-        apellido: 'Lunares',
-        email: 'carmen@yimeil.com',
-        imagen: './assets/img/15.jpg',
-        celular: 12345678,
-        whatsapp: 87654321,
-        mentor: 2
+        mentor: 7
     },
     {
         id: 8,
+        nombre: 'Napoleon',
+        apellido: 'Bonaparte',
+        email: 'napoleon@yimeil.com',
+        imagen: './assets/img/8.jpg',
+        celular: 12345678,
+        whatsapp: 87654321,
+        mentor: 10
+    },
+    {
+        id:9,
+        nombre: 'Edgar',
+        apellido: 'Lopez',
+        email: 'edgar@yimeil.com',
+        imagen: './assets/img/9.jpg',
+        celular: 12345678,
+        whatsapp: 87654321,
+        mentor: 11
+    },
+    {
+        id: 12,
+        nombre: 'Pedro',
+        apellido: 'Elisondo',
+        email: 'pedro@yimeil.com',
+        imagen: './assets/img/12.jpg',
+        celular: 12345678,
+        whatsapp: 87654321,
+        mentor: 15
+    },
+    {
+        id: 13,
+        nombre: 'Carmen',
+        apellido: 'Lunares',
+        email: 'carmen@yimeil.com',
+        imagen: './assets/img/13.jpg',
+        celular: 12345678,
+        whatsapp: 87654321,
+        mentor: 16
+    },
+    {
+        id: 14,
         nombre: 'Dario',
         apellido: 'Benjamin',
         email: 'dario@yimeil.com',
-        imagen: './assets/img/16.jpg',
+        imagen: './assets/img/14.jpg',
         celular: 12345678,
         whatsapp: 87654321,
-        mentor: 1
+        mentor: 19
     }
     , {
-        id: 9,
+        id: 17,
         nombre: 'Rayan',
         apellido: 'Dribal',
         email: 'rayan@yimeil.com',
         imagen: './assets/img/17.jpg',
         celular: 12345678,
         whatsapp: 87654321,
-        mentor: 3
+        mentor: 1
     }, {
-        id: 10,
+        id: 18,
         nombre: 'Xochilt',
         apellido: 'Moican',
         email: 'xochilt@yimeil.com',

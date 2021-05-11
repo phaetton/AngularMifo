@@ -1,21 +1,189 @@
-<select (change)="onchange($event)">
-  <option value="Todos">Todos</option>
-  <option value="Managua">Managua</option>
-  <option value="Merida">Merida</option>
-  <option value="Honduras">Honduras</option>
-</select>
+<!-- This example requires Tailwind CSS v2.0+ -->
+<!--
+  Custom select controls like this require a considerable amount of JS to implement from scratch. We're planning
+  to build some low-level libraries to make this easier with popular frameworks like React, Vue, and even Alpine.js
+  in the near future, but in the mean time we recommend these reference guides when building your implementation:
 
-<div class="mentores">
-  <div class="mentor" *ngFor="let mentor of arrMentores">
-    <h3>
-      {{ mentor.id }} - {{ mentor.nombre }} {{ mentor.apellido }}
-    </h3>
-    <img [src]="mentor.imagen" alt="" />
-    <ul>
-      <li>{{ mentor.oficina }}</li>
-      <li>{{ mentor.email }}</li>
-      <li>{{ mentor.celular }}</li>
-      <li>{{ mentor.whatsapp }}</li>
-    </ul>
+  https://www.w3.org/TR/wai-aria-practices/#Listbox
+  https://www.w3.org/TR/wai-aria-practices/examples/listbox/listbox-collapsible.html
+-->
+<div class="flex-1 px-2 flex justify-center lg:ml-6 lg:justify-end mb-5">
+  <div class="max-w-lg w-full lg:max-w-xs">
+    <select
+      class="
+        relative
+        w-full
+        bg-white
+        border border-gray-300
+        rounded-md
+        shadow-sm
+        pl-3
+        pr-10
+        py-2
+        text-left
+        cursor-default
+        focus:outline-none
+        focus:ring-1 focus:ring-indigo-500
+        focus:border-indigo-500
+        sm:text-sm
+      "
+      (change)="onchange($event)"
+    >
+      <option value="Todos">
+        <span class="font-normal truncate">Todos</span>
+      </option>
+      <option value="Managua">
+        <span class="font-normal truncate">Managua</span>
+      </option>
+      <option value="Merida">
+        <span class="font-normal truncate">Merida</span>
+      </option>
+      <option value="Honduras">
+        <span class="font-normal truncate">Honduras</span>
+      </option>
+    </select>
+  </div>
+</div>
+
+
+<!-- formato de tablas -->
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="flex flex-col">
+  <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+      <div
+        class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+      >
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th
+                scope="col"
+                class="
+                  px-6
+                  py-3
+                  text-left text-xs
+                  font-medium
+                  text-gray-500
+                  uppercase
+                  tracking-wider
+                "
+              >
+                Nombre
+              </th>
+              <th
+                scope="col"
+                class="
+                  px-6
+                  py-3
+                  text-left text-xs
+                  font-medium
+                  text-gray-500
+                  uppercase
+                  tracking-wider
+                "
+              >
+                Tipo de Mentor
+              </th>
+              <th
+                scope="col"
+                class="
+                  px-6
+                  py-3
+                  text-left text-xs
+                  font-medium
+                  text-gray-500
+                  uppercase
+                  tracking-wider
+                "
+              >
+                Status
+              </th>
+              <th
+                scope="col"
+                class="
+                  px-6
+                  py-3
+                  text-left text-xs
+                  font-medium
+                  text-gray-500
+                  uppercase
+                  tracking-wider
+                "
+              >
+                Role
+              </th>
+              <th scope="col" class="relative px-6 py-3">
+                <span class="sr-only">Action</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr
+              *ngFor="let mentor of arrMentores"
+              [routerLink]="['/mentores', mentor.id]"
+            >
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10">
+                    <img
+                      class="h-10 w-10 rounded-full"
+                      [src]="mentor.imagen"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <div class="text-sm font-medium text-gray-900">
+                      {{ mentor.nombre }} {{ mentor.apellido }}
+                    </div>
+                    <div class="text-sm text-gray-500">
+                      {{ mentor.email }}
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">{{ mentor.oficina }}</div>
+                <div class="text-sm text-gray-500">{{ mentor.celular }}</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <span
+                  class="
+                    px-2
+                    inline-flex
+                    text-xs
+                    leading-5
+                    font-semibold
+                    rounded-full
+                    bg-green-100
+                    text-green-800
+                  "
+                >
+                  Active
+                </span>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                Mentor Profesional
+              </td>
+              <td
+                class="
+                  px-6
+                  py-4
+                  whitespace-nowrap
+                  text-right text-sm
+                  font-medium
+                "
+              >
+                <a [routerLink]="['/mentores', mentor.id, 'mentorados']" class="text-indigo-600 hover:text-indigo-900"
+                  >Mentorados</a
+                >
+              </td>
+            </tr>
+
+            <!-- More people... -->
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
